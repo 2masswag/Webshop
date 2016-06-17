@@ -1,18 +1,3 @@
-CREATE TABLE IF NOT EXISTS Klanten
-( 
-	KlantID SMALLINT NOT NULL,
-	Voornaam CHAR(24) NOT NULL,
-	Tussenvoegsel CHAR(12),
-	Achternaam Char(24) NOT NULL,
-	Email CHAR(30) NOT NULL ,
-	Telefoonnummer CHAR(15) NOT NULL ,
-	Straat CHAR(20) NOT NULL ,
-	Woonplaats CHAR(20) NOT NULL ,
-	Postcode CHAR (7) NOT NULL ,
-	Bestelhistorie CHAR(50) NOT NULL ,
-	PRIMARY KEY (KlantID) ,
-)
-
 CREATE TABLE IF NOT EXISTS Eigenaren
 ( 
 	EigenaarID SMALLINT NOT NULL,
@@ -20,7 +5,7 @@ CREATE TABLE IF NOT EXISTS Eigenaren
 	Email_Eigenaar CHAR(30) NOT NULL ,
 	Telefoonnummer_Eigenaar CHAR(15) NOT NULL ,
 	PRIMARY KEY(EigenaarID)
-)
+) ;
 
 CREATE TABLE IF NOT EXISTS Producten
 (
@@ -34,7 +19,22 @@ CREATE TABLE IF NOT EXISTS Producten
 	PRIMARY KEY(ProductID) ,
 	FOREIGN KEY (EigenaarID)
 	REFERENCES Eigenaren(EigenaarID) 
-)
+) ;
+
+CREATE TABLE IF NOT EXISTS Klanten
+( 
+	KlantID SMALLINT NOT NULL,
+	Voornaam CHAR(24) NOT NULL,
+	Tussenvoegsel CHAR(12),
+	Achternaam Char(24) NOT NULL,
+	Email CHAR(30) NOT NULL ,
+	Telefoonnummer CHAR(15) NOT NULL ,
+	Straat CHAR(20) NOT NULL ,
+	Woonplaats CHAR(20) NOT NULL ,
+	Postcode CHAR (7) NOT NULL ,
+	Bestelhistorie CHAR(50) NOT NULL ,
+	PRIMARY KEY (KlantID) ,
+) ;
 
 CREATE TABLE IF NOT EXISTS Bestellingen
 (
@@ -50,4 +50,4 @@ CREATE TABLE IF NOT EXISTS Bestellingen
 	REFERENCES Producten(ProductID) ,
 	FOREIGN KEY (EigenaarID)
 	REFERENCES Eigenaren(EigenaarID)
-)
+) ;
