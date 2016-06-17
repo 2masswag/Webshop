@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS Producten
 	Deuren CHAR(1) NOT NULL ,
 	PRIMARY KEY(ProductID) ,
 	FOREIGN KEY (EigenaarID)
-	REFERECENS Eigenaren(EigenaarID) 
+	REFERENCES Eigenaren(EigenaarID) 
 )
 
 CREATE TABLE IF NOT EXISTS Bestellingen
