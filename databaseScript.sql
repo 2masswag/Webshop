@@ -16,6 +16,12 @@ CREATE TABLE IF NOT EXISTS Producten
 	Vermogen CHAR(8) NOT NULL ,
 	Zitplaatsen CHAR(2) NOT NULL ,
 	Deuren CHAR(1) NOT NULL ,
+	Verbruik CHAR(5) NOT NULL ,
+	Brandstof CHAR(6) NOT NULL ,
+	Aandrijving CHAR(4) NOT NULL ,
+	Transmissie CHAR(4) NOT NULL ,
+	Aantal_Versnellingen CHAR(3) NOT NULL ,
+	Kilometerstand CHAR(9) NOT NULL ,
 	PRIMARY KEY(ProductID) ,
 	FOREIGN KEY (EigenaarID)
 	REFERENCES Eigenaren(EigenaarID) 
