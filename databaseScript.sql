@@ -11,8 +11,6 @@ CREATE TABLE IF NOT EXISTS Klanten
 	Postcode CHAR (7) NOT NULL ,
 	Bestelhistorie CHAR(50) NOT NULL ,
 	PRIMARY KEY (KlantID) ,
-	FOREIGN KEY (BestelID)
-	REFERENCES Bestellingen(BestelID)
 )
 
 CREATE TABLE IF NOT EXISTS Eigenaren
