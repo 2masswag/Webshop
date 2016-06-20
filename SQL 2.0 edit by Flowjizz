@@ -31,7 +31,7 @@ REFERENCES Eigenaren(EigenaarID)
 
 CREATE TABLE IF NOT EXISTS Klanten
 ( 
-KlantID SMALLINT NOT NULL,
+KlantID SMALLINT NOT NULL AUTO_INCREMENT,
 Voornaam CHAR(24) NOT NULL,
 Tussenvoegsel CHAR(12),
 Achternaam Char(24) NOT NULL,
